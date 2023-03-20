@@ -34,7 +34,9 @@
             
         @media only screen and (min-width:321px) and (max-width:568px) {
             .s-label {
-                text-align: center !important;
+                width: 100%;
+                margin-bottom: 8px;
+
             }
             .s-label select{
                 
@@ -47,6 +49,50 @@
             .chartBox {
             width: 600px;
           }
+          .mb-r{
+            width: 100px !important;
+          }
+        }
+            
+        @media only screen and (min-width:568px) and (max-width:1168px) {
+            .s-label {
+                width: 100%;
+                margin-bottom: 8px;
+
+            }
+            .s-label select{
+                
+                width: 100% !important;
+            }
+            .input{
+                
+                width: 100% !important;
+            }            
+            .chartBox {
+            width: 600px;
+          }
+         
+        }
+        @media only screen and (min-width:568px) and (max-width:1168px) {
+            /* .s-label {
+                width: 100%;
+                margin-bottom: 8px;
+
+            }
+            .s-label select{
+                
+                width: 100% !important;
+            }
+            .input{
+                
+                width: 100% !important;
+            }            
+            .chartBox {
+            width: 600px;
+          } */
+          /* .mb-r{
+            width: 400px !important;
+          } */
         }
 
             /* sidebar style */
@@ -78,14 +124,14 @@
 
         
         /* header date responsive */
-        @media only screen and (min-width:321px) and (max-width:568px) {
-      .text-m{
-        text-align: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        /* @media only screen and (min-width:321px) and (max-width:568px) {
+      .s-label {
+       width: 100%;
+       margin-bottom: 8px;
+
       }
         
-        }
+        } */
       </style>
 </head>
 
@@ -149,68 +195,88 @@
       </div>
 
       <div class="container-fluid mx-auto pt-3 pb-3">
-            <div class="container-fluid bg-white rounded-3 mt-3 text-m ">
-                  <div class="row justify-content-between align-items-center text-m">
-                    <div class="col-sm-4 col-md-3 pt-2 col-lg-2">
-                      <div class="form-check text-m" style="text-align: justify;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                          style="border: 1px solid gray;">
-                        <label class="form-check-label fw-semibold" for="flexCheckDefault">
-                          Date
-                        </label>
+         
+                <div class="container-fluid bg-white mx-auto my-3">
+                  <div class="row">
+                      <div class="col-md-12  col-lg-4 d-flex">
+                          <div class="col-2 align-self-center">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                  style="border: 1px solid gray;">
+                                  <label class="form-check-label fw-semibold" for="flexCheckDefault">
+                                  Date
+                              </label>
+                          </div>
+                          <div class="d-flex ">
+                              <form class="col-xs-12 mb-r text-m mx-3 py-3" action="/action_page.php" >
+                                  <label class="From" for="datemin">From:</label>
+                                  <br />
+                                  <input class="input rounded" type="date" id="datemin" name="datemin" min="2000-01-01"
+                                  style="padding: 6px; ;background: rgb(225, 224, 224); border: none;">
+                                  <br />
+                              </form>
+                                  
+                              <from class="col-md-5 text-m mx-3 py-3 mb-r" action="/action_page.php" >
+                                  <label class="From" for="datemax">To:</label>
+                                  <br />
+                                  <input class="input rounded-3" type="date" id="datemax" name="datemax"
+                                  style="padding: 6px; ;background: rgb(225, 224, 224); border: none;"> </input><br /><br />
+                              </form>
+                          </div>
                       </div>
-                      <form class="text-m" action="/action_page.php" style="text-align: justify;">
-                        <label class="From" for="datemin">From:</label>
-                        <br />
-                        <input class="input rounded" type="date" id="datemin" name="datemin" min="2000-01-01"
-                          style="padding: 6px; background: whitesmoke; border: none;"> </input>
-                        <br />
-              
-                        <label class="From" for="datemax">To:</label>
-                        <br />
-                        <input class="input rounded-3" type="date" id="datemax" name="datemax"
-                          style="padding: 6px; background: whitesmoke; border: none;"> </input><br /><br />
-                      </form>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-1 my-2">
-                      <div class="form-check text-m" style="text-align: justify;">
-                        <input class="form-check-input text-m" type="checkbox" value="" id="flexCheckDefault"
-                          style="border: 1px solid gray;">
-                        <label class="form-check-label fw-semibold text-center" for="flexCheckDefault">
-                          Location
-                        </label>
+                      <div class="col-md-12 col-xs-12 col-lg-4 d-flex align-self-center">
+                          <div class="form-check text-m mx-3 pt-1">
+                              <input class="form-check-input text-m" type="checkbox" value="" id="flexCheckDefault"
+                                style="border: 1px solid gray;">
+                              <label class="form-check-label fw-semibold text-center" for="flexCheckDefault">
+                                Location
+                              </label>
+                          </div>
+                          <div class="dropdown  s-label">
+                              <select class="rounded" name="cars" id="cars"
+                              style="padding: 6px; width: 300px;background: rgb(225, 224, 224); border: none;">
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lucknow">Lucknow</option>
+                              </select>
+                          </div>
                       </div>
-                      <div class="dropdown  s-label">
-                        <select class="rounded" name="cars" id="cars"
-                          style="padding: 6px; width: 145px;background: whitesmoke; border: none;">
-                          <option value="Mumbai">Mumbai</option>
-                          <option value="Delhi">Delhi</option>
-                          <option value="Lucknow">Lucknow</option>
-                        </select>
+                      
+                      <div class="col-md-12 col-xs-12 col-lg-4 d-flex align-self-center ">
+                          <div class="form-check text-m mx-3 pt-1" >
+                              <input class="form-check-input text-m" type="checkbox" value="" id="flexCheckDefault"
+                                style="border: 1px solid gray;">
+                              <label class="form-check-label fw-semibold text-center" for="flexCheckDefault">
+                                Generator
+                              </label>
+                          </div>
+                          <div class="dropdown s-label">
+                              <select class="rounded" name="cars" id="cars"
+                                style="padding: 6px; width: 300px;background: rgb(225, 224, 224); border: none;">
+                                <option value="">Gen 1 - Gen 25</option>
+                                <option value="Mumbai">Generator 1</option>
+                                <option value="Delhi">Generator 2</option>
+                                <option value="Lucknow">Generator 3</option>
+                              </select>
+                          </div>
                       </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 my-3" style="text-align: end;">
-                      <div class="form-check text-m small-gen" style="margin-right:44px;">
-                        <input class="form-check-input text-m" type="checkbox" value="" id="flexCheckDefault"
-                          style="border: 1px solid gray;">
-                        <label class="form-check-label fw-semibold text-m " for="flexCheckDefault">
-                          Generator
-                        </label>
-                      </div>
-                      <div class="dropdown py-2 s-label text-m">
-                        <select class="rounded" name="cars" id="cars"
-                          style="padding: 6px; width: 145px;background: whitesmoke; border: none;">
-                          <option value="">Gen 1 - Gen 25</option>
-                          <option value="">Generator 1</option>
-                          <option value="">Generator 2</option>
-                          <option value="">Generator 3</option>
-                        </select>
-                      </div>
-                    </div>
+                  </div>
+              </div>
+
+
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-4" style="border: 1px solid red;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                    style="border: 1px solid gray;">
+                    <label class="form-check-label fw-semibold" for="flexCheckDefault">
+                    Date
+                </label>
+                
                   </div>
                 </div>
+              </div>
 
-
+              
             <div class="chart-container bg-white row justify-content-center rounded-3 my-3 mx-auto" style="overflow: auto;">
                   <div class="col-sm-8">
                         <div class="chartBox">
@@ -231,11 +297,21 @@ const myChart = new Chart(ctx, {
     labels: ['1', '2', '3', '4', '5'],
     
     datasets: [{
-      label: [ 'Under-utilised', 'Optimal', 'Over-loaded'],
+      label: 'Optimal',
       backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
       borderWidth: 1,
       data: [1, 1, 1, 1, 1,]
-    },]
+    },
+    {
+      label:'Under-utilised',
+      backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
+    },{
+      label:'Over-Loaded',
+      backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
+      borderWidth: 1,
+      
+    }
+  ]
   },
   
             options: {
@@ -250,7 +326,7 @@ const myChart = new Chart(ctx, {
                 x: {
                   title: {
                     display: true,
-                    text: [ 'Under-utilised', 'Optimal', 'Over-loaded'],
+                    // text: [ 'Under-utilised', 'Optimal', 'Over-loaded'],
                   },
                   grid: {
                     display: false,

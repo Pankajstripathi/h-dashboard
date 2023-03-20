@@ -43,8 +43,14 @@
       font-size: 1rem;
       font-weight: bold;
     }
+    #line{
+      /* border: 1px solid red; */
+      height: 220px !important;
+    }
+    #chart{
+      height: 220px !important;
 
-    
+    }
     @media only screen and (min-width:321px) and (max-width:568px) {
             .s-label {
                 text-align: center !important;
@@ -211,68 +217,92 @@
 
     <script>
         ////STACK BAR
+        
         const ctx = document.getElementById('myChart2').getContext('2d');
 
         const myChart2 = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['1', '2', '3', '4', '5'],
-                datasets: [{
-                    label: 'Dataset 1',
-                    backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
-                    borderWidth: 1,
-                    data: [10, 10, 10, 10, 10,]
-                },]
-            },
+                  datasets: [{
+      label: 'Optimal',
+      backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
+      borderWidth: 1,
+      data: [1, 1, 1, 1, 1,]
+    },
+    {
+      label:'Under-utilised',
+      backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
+    },{
+      label:'Over-Loaded',
+      backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
+      borderWidth: 1,
+      
+    }
+           ] },
         });
+        ////////
         const data2 = {
-            labels: ['Maintenance Done', 'Maintenance Not Done'],
-            datasets: [{
-                type: 'bar',
-                // label: 'Generator Maintenance',
+  labels: ['Maintenance Done', 'Maintenance Not Done'],
+  datasets: [
+    {
+      type: 'bar',
+      backgroundColor: '#0062a9',
+      data: [-10],
+    },
+    {
+      type: 'bar',
+      backgroundColor: '#0062a9',
+      data: [0, 25],
+    },
+  ],
+};
 
-                backgroundColor: '#0062a9',
-                data: [-10],
-            }, {
-                type: 'bar',
-                // label: 'Negative Values',
-                backgroundColor: '#0062a9',
-                data: [0, 25,]
-            }]
-        };
-        const options = {
-            responsive: true,
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Waterfall Chart'
-            },
-            scales: {
-                xAxes: [{
-                    stacked: true,
-                    barPercentage: 2,
-                    categoryPercentage: 2
-                }],
-                yAxes: [{
-                    stacked: true,
-                    ticks: {
-                        min: 0,
-                        max: 100,
-                        callback: function (value, index, values) {
-                            return '$' + value;
-                        }
-                    }
-                }]
-            }
-        };
+const options = {
+  responsive: true,
+  legend: {
+    position: 'top',
+  },
+  title: {
+    display: true,
+    text: 'Waterfall Chart',
+  },
+  scales: {
+    xAxes: [
+      {
+        stacked: true,
+        barPercentage: 2,
+        categoryPercentage: 2,
+        scaleLabel: {
+          display: true,
+          labelString: 'Status',
+        },
+      },
+    ],
+    yAxes: [
+      {
+        stacked: true,
+        ticks: {
+          min: 0,
+          max: 100,
+          callback: function (value, index, values) {
+            return value + ' Units';
+          },
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Units',
+        },
+      },
+    ],
+  },
+};
 
-        const chart = new Chart(document.getElementById('chart'), {
-            type: 'bar',
-            data: data2,
-            options: options
-        });
+const chart = new Chart(document.getElementById('chart'), {
+  type: 'bar',
+  data: data2,
+  options: options,
+});
 
         // doughnut chart
 
@@ -303,24 +333,35 @@
 
         const ctl = document.getElementById('line');
 
-        new Chart(ctl, {
-            type: 'line',
-            data: {
+new Chart(ctl, {
+  type: 'line',
+  data: {
+    datasets: [
+      {
+        type: 'line',
+        label: 'Energy Produced',
+        data: [8, -10, 8, 10, 8, -1, 11],
+      },
+      {
+        type: 'line',
+        label: 'Diesel consumed',
+        data: [0, 4, 5, 6, 2, 6, 8],
+      },
+    ],
+    labels: ['1', '2', '3', '4', '5', ' 6', '7'],
+  },
+  options: {
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: 'Units ',
+        },
+      },
+    },
+  },
+});
 
-                datasets: [{
-                    type: 'line',
-                    label: 'data1',
-                    data: [8, -10, 8, 10, 8, -1, 11],
-                },
-                {
-                    type: 'line',
-                    label: 'data2',
-                    data: [0, 4, 5, 6, 2, 6, 8],
-                }],
-                labels: ['21/02/23', '22/02/23', '23/02/23', '24/02/23', '25/02/23', '26/02/23', '27/02/23'],
-            },
-
-        });
 
         // setup
 

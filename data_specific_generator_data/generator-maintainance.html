@@ -242,11 +242,16 @@
                 xAxes: [{
                     stacked: true,
                     barPercentage: 2,
-                    categoryPercentage: 2
+                    categoryPercentage: 2,
                 }],
                 yAxes: [{
                     stacked: true,
                     ticks: {
+                       beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: "Units",
+                  },
                         min: 0,
                         max: 100,
                         callback: function (value, index, values) {
@@ -254,6 +259,8 @@
                         }
                     }
                 }]
+               
+            
             }
         };
 
