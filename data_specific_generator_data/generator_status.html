@@ -175,20 +175,20 @@
       <i class="bi bi-list toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
       <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
       
-        <div class="offcanvas-body">
+        <div class="offcanvas-body" style="background-color: #002a69;">
           <div class="offcanvas-header text-light row justify-content-end">
               <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div>
-            <a href="FuelConsumption.html" class="text-light sidebar-link">Fuel Consumption</a>
+            <a href="FuelConsumption.html" class="text-light sidebar-link" style="font-size: 1.5rem;">Fuel Consumption</a>
             <hr>
-            <a href="generator_status.html" class="text-light sidebar-link">Generator Status</a>
+            <a href="generator_status.html" class="text-light sidebar-link" style="font-size: 1.5rem;">Generator Status</a>
             <hr>
-            <a href="energy-vs-diesel.html" class="text-light sidebar-link">Energy Vs Diesel</a>
+            <a href="energy-vs-diesel.html" class="text-light sidebar-link" style="font-size: 1.5rem;">Energy Vs Diesel</a>
             <hr>
-            <a href="generator-maintainance.html" class="text-light sidebar-link">Generator Maintenance</a>
+            <a href="generator-maintainance.html" class="text-light sidebar-link" style="font-size: 1.5rem;">Generator Maintenance</a>
             <hr>
-            <a href="operational-vs-nonOperational.html" class="text-light sidebar-link">Operational Vs Non-Operational Generator</a>
+            <a href="operational-vs-nonOperational.html" class="text-light sidebar-link" style="font-size: 1.5rem;">Operational Vs Non-Operational Generator</a>
             <hr>
         </div>
         </div>
@@ -198,7 +198,7 @@
          
                 <div class="container-fluid bg-white mx-auto my-3">
                   <div class="row">
-                      <div class="col-md-12  col-lg-4 d-flex">
+                      <div class="col-xl-4 col-lg-4 d-flex">
                           <div class="col-2 align-self-center">
                               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
                                   style="border: 1px solid gray;">
@@ -223,7 +223,7 @@
                               </form>
                           </div>
                       </div>
-                      <div class="col-md-12 col-xs-12 col-lg-4 d-flex align-self-center">
+                      <div class="col-xl-4 col-xs-12 col-lg-4 d-flex align-self-center">
                           <div class="form-check text-m mx-3 pt-1">
                               <input class="form-check-input text-m" type="checkbox" value="" id="flexCheckDefault"
                                 style="border: 1px solid gray;">
@@ -241,7 +241,7 @@
                           </div>
                       </div>
                       
-                      <div class="col-md-12 col-xs-12 col-lg-4 d-flex align-self-center ">
+                      <div class="col-xl-4 col-xs-12 col-lg-4 d-flex align-self-center ">
                           <div class="form-check text-m mx-3 pt-1" >
                               <input class="form-check-input text-m" type="checkbox" value="" id="flexCheckDefault"
                                 style="border: 1px solid gray;">
@@ -260,21 +260,11 @@
                           </div>
                       </div>
                   </div>
+                  
               </div>
 
 
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-4" style="border: 1px solid red;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                    style="border: 1px solid gray;">
-                    <label class="form-check-label fw-semibold" for="flexCheckDefault">
-                    Date
-                </label>
-                
-                  </div>
-                </div>
-              </div>
+              
 
               
             <div class="chart-container bg-white row justify-content-center rounded-3 my-3 mx-auto" style="overflow: auto;">
@@ -306,7 +296,7 @@ const myChart = new Chart(ctx, {
       label:'Under-utilised',
       backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
     },{
-      label:'Over-Loaded',
+      label:'Over-loaded',
       backgroundColor: ['#ed7d31', '#0062a9', '#a5a5a5', '#ed7d31', '#a5a5a5'],
       borderWidth: 1,
       
@@ -341,6 +331,11 @@ const myChart = new Chart(ctx, {
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
+            
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
 </body>
 
 </html>

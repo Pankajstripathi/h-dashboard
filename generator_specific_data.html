@@ -24,53 +24,64 @@
             padding: 0;
         }
 
-        .row-div {
-            border-radius: 10px;
-            background-color: rgb(255, 255, 255);
+        .classWithPad {
+            margin: 0px;
+            padding: 10px;
         }
 
-        .asset-para{
-            font-size: 32px;
-            color: #0062A9;
+        /* .row-div {
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+        } */
+
+        .asset-para {
+            font-size: 22px;
+            /* color: #0062A9; */
         }
-        .value-para{
-            font-size: 40px;
-            color: #0062A9;
-            font-weight: bold;
+
+        .value-para {
+            font-size: 21px;
+            /* color: #0062A9; */
+            /* font-weight: bold; */
             margin: 0px;
         }
 
-        .heading-1{
-            color: #ED3E3E; 
-            font-size: 32px; 
+        .heading-1 {
+            color: #ED3E3E;
+            font-size: 32px;
             font-weight: bold;
         }
 
-        .heading-2{
-            color: #ED3E3E; 
-            font-size: 24px; 
+        .heading-2 {
+            color: #ED3E3E;
+            font-size: 24px;
             font-weight: bold;
         }
-        path {
-            fill: orange;
-            stroke: orange;
+
+        .loader {
+            border: 16px solid rgb(193, 218, 228);
+            border-radius: 55%;
+            border-top: 16px solid #4e6868;
+            border-right: 16px solid #4e6868;
+            border-bottom: 16px solid #4e6868;
+            width: 160px;
+            height: 160px;
+            background-color: rgb(229, 231, 232);
         }
 
-        .needle {
-            fill: #f00;
-            stroke: #f00;
-            stroke-width: 2px;
+        .loader-inner {
+            /* display: block; */
+            margin-top: 30px;
+            font-size: 2.4rem;
+            font-weight: bold;
+            margin-left: 8px !important;
+
         }
 
-        .tick {
-            stroke: orange;
-            stroke-width: 2px;
-        }
-
-        .tick-label {
-            fill: orange;
-            font-size: 16px;
-            text-anchor: middle;
+        #line {
+            width: 100% !important;
+            height: 400px !important;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -112,170 +123,175 @@
     </nav>
 
     <div class="container-fluid p-3 text-center" style="overflow-x: hidden;">
-        <div class="row justify-content-evenly gen-name text-center"> 
-            <h2 class="row-div col-md-2 py-1" style="font-size: 32px; font-weight: normal; width: fit-content;">Generator 01</h2>   
-            <h2 class="row-div col-md-2 py-1" style="font-size: 32px; font-weight: normal; width: fit-content;">Mumbai</h2>              
-        </div>
-        <div class="row row-1 justify-content-center align-items-strech text-center ps-md-5 ms-md-3">
-            <div class="col-md-5 m-1 p-0 ">
-                <div class="row-div px-4 m-2 ms-md-3">
-                    <h2 class="py-3 heading-1">Asset Purchase Details</h2>
-                    <div>
-                        <div class="row justify-content-center text-start">
-                            <p class="col-md-6 asset-para">Company Name</p>
-                            <p class="col-md-5 text-md-center text-center asset-para">: Oriental</p>
-                        </div>
-                        <div class="row justify-content-center text-start">
-                            <p class="col-md-6 asset-para">Date of Purchase</p>
-                            <p class="col-md-5 text-md-end text-center asset-para">: 14.06.2005</p>
-                        </div>
-                        <div class="row justify-content-center text-start">
-                            <p class="col-md-6 asset-para">Model No.</p>
-                            <p class="col-md-5 text-md-center text-start asset-para">: 25645</p>
-                        </div>
-                        <div class="row justify-content-center text-start">
-                            <p class="col-md-6 asset-para">Warranty Period</p>
-                            <p class="col-md-5 text-md-center text-center asset-para">: 5 years</p>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="classWithPad  rounded-3" style="background: whitesmoke;">
+                <select class="text-center fw-bold" name="cars" id="cars" style="width: 100% !important; border: none; font-size: 18px; ">
+                <option value="Generator 1">Generator 1</option>
+                <option value="Generator 2">Generator 2</option>
+                <option value="Generator 3">Generator 3</option>
+                </select>
                 </div>
             </div>
-            <div class="col-md-6 m-1">
-                <div class="row justify-content-center location text-center">                
-                    <div class="p-0">
-                        <div class="row container-fluid justify-content-start align-items-strech">
-                            <div class="col-md-5 row-div m-2">
-                                <h2 class="heading-2 pt-3 pb-2">Asset Value</h2>
-                                <p class="value-para py-1">200000</p>
-                                <p></p>
-                            </div>
-                            <div class="col-md-5 row-div m-2">
-                                <h2 class="heading-2 pt-3 pb-2">AMC Status</h2>
-                                <p class="value-para py-1">DONE</p>
-                                <p>*As of February 2023</p>
-                            </div>
-                        </div>
-                        
-                        <div class="row container-fluid justify-content-start align-items-strech">
-                            <div class="col-md-5 row-div m-2">
-                                <h2 class="heading-2 pt-3 pb-2">Consumable Spent</h2>
-                                <p class="value-para py-1">100</p>
-                                <p></p>
-                            </div>
-                            <div class="col-md-5 row-div m-2">
-                                <h2 class="heading-2 pt-3 pb-2">Age of Generator</h2>
-                                <p class="value-para py-1">15 years</p>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-6">
+                <div class="classWithPad  rounded-3" style="background: whitesmoke;">
+                   <span class="fw-bold" style="font-size: 18px;">Mumbai</span> 
                 </div>
             </div>
         </div>
+        <div class="row mt-3">
+            <div class=" col-md-6">
+                <div class="classWithPad  rounded-3" style="background: whitesmoke;">
+                    <h2 class="py-1 heading-1 text-center">Asset Purchase Details</h2>
+                    <div class="row " style=" margin: 0 auto; ">
 
-        <div class="row row-2 justify-content-center align-items-strech pe-md-5">
-            <div class="col-md-5 m-1">
-                <div class="row justify-content-center location text-center">             
-                    <div class="p-0">
-                        <div class="row ms-0 pe-0 container-fluid justify-content-end align-items-strech">
-                            <div class="col-md-7 row-div m-2">
-                                <h2 class="heading-2 pb-2 pt-3">Maintenance Cost Spent</h2>
-                                <p class="value-para py-1">INR 5000</p>
-                                <p>*As of February 2023</p>
-                            </div>
-                            <div class="col-md-4 row-div m-2">
-                                <h2 class="heading-2 pb-2 pt-3">Run Time Status</h2>
-                                <p class="value-para py-1">150000</p>
-                                <p></p>
-                            </div>
+                        <div class="row justify-content-center text-start">
+                            <p class="col-md-5 asset-para">Company Name</p>
+                            <p class="col-md-5 text-md- text-center asset-para">: Oriental</p>
                         </div>
-                        
-                        <div class="row ms-0 pe-0 container-fluid justify-content-end align-items-strech">
-                            <div class="col-md-7 row-div m-2">
-                                <h2 class="heading-2 pb-2 pt-3">Energy Produced</h2>
-                                <p class="value-para py-1">15456456</p>
-                                <p>*As of February 2023</p>
-                            </div>
-                            <div class="col-md-4 row-div m-2">
-                                <h2 class="heading-2 pb-2 pt-3">Total Hours run till today</h2>
-                                <p class="value-para py-1">1.5 Lacs</p>
-                                <p></p>
-                            </div>
+                        <div class="row justify-content-center text-start">
+                            <p class="col-md-5 asset-para">Date of Purchase</p>
+                            <p class="col-md-5 text-md- text-center asset-para" style="padding-left: 40px;">: 14.06.2005
+                            </p>
+                        </div>
+                        <div class="row justify-content-center text-start">
+                            <p class="col-md-5 asset-para">Model No.</p>
+                            <p class="col-md-5 text-md- text-center asset-para" style="padding-right: 30px;">: 25645</p>
+                        </div>
+                        <div class="row justify-content-center text-start">
+                            <p class="col-md-5 asset-para">Warranty Period</p>
+                            <p class="col-md-5 text-md- text-center asset-para" style="padding-right: 24px;">: 5 years
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 ">
+                <div class="row" >
+                    <div class="text-center col-md-6">
+                        <div class="classWithPad rounded-3" style="background: whitesmoke">
+                            <h2 class="heading-2 pt-2 pb-2 mb-1">Asset Value</h2>
+                            <p class="value-para py-1">200000</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="text-center col-md-6 mb-1">
+                        <div class="classWithPad rounded-3" style="background: whitesmoke">
+                            <h2 class="heading-2 pt-1 pb-0 mb-1">AMC Status</h2>
+                            <p class="value-para ">DONE</p>
+                            <p>*As of February 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="text-center col-md-6">
+                        <div class="classWithPad rounded-3" style="background: whitesmoke">
+                            <h2 class="heading-2 pt-2 pb-2 mt-0">Consumable Spent</h2>
+                            <p class="value-para py-1">100</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="text-center col-md-6">
+                        <div class="classWithPad rounded-3" style="background: whitesmoke">
+                            <h2 class="heading-2 pt-1 pb-2 mt-1">Age of Generator</h2>
+                            <p class="value-para py-1">15 years</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 p-0 my-3 mx-2 row-div">
-                <h2 class="heading-1 py-3">Generator Utilization</h2>
-                <div class="row container-fluid mt-4 justify-content-between align-items-center">                    
-                    <div class="col-lg-6 my-2">
-                        <svg class="" width="320" height="160px"></svg>
-                        <h5 id="generator-value" class="ms-md-5 ps-5"></h5>
+        </div>
+        <div class="row mt-3">
+
+            <div class="col-md-6 ">
+                <div class="row">
+                    <div class="text-center col-md-6">
+                        <div class="classWithPad rounded-3 py-3" style="background: whitesmoke">
+                            <h3 class="pb-2">Maintenance Cost</h3>
+                            <div class="loader" style="margin: 0 auto;">
+                                <div class="loader-inner" style="width: 100%;">80%</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-5 ms-3 my-2 text-sm-start text-center" style="list-style-type: disc; font-size: 20px;">
-                        <p> <span><i class="bi bi-square-fill"></i></span> 0-35 : Under Utilized</p>
-                        <p> <span><i class="bi bi-square-fill"></i></span> 35-85 : Optimal</p>
-                        <p> <span><i class="bi bi-square-fill"></i></span> 85-100 : Over Utilized</p>
+                    <div class="text-center col-md-6 mb-1">
+                        <div class="classWithPad rounded-3  py-3" style="background: whitesmoke">
+                            <h3 class="pb-2">Running Status</h3>
+                            <div class="loader " style="margin: 0 auto;">
+                                <div class="loader-inner " style="width: 100%;">80%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
+            <div class="col-md-6 ">
+                <div class="">
+                    <div class="row">
+                        <div class="text-center col-md-6">
+                            <div class="classWithPad rounded-3  py-3" style="background: whitesmoke">
+                                <h3 class="pb-2">Energy Produced</h3>
+                                <div class="loader" style="margin: 0 auto;">
+                                    <div class="loader-inner" style="width: 100%;">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center col-md-6 mb-1">
+                            <div class="classWithPad rounded-3  py-3" style="background: whitesmoke">
+                                <h3 class="pb-2"> Running Hours</h3>
+                                <div class="loader" style="margin: 0 auto;">
+                                    <div class="loader-inner" style="width: 100%;">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
         </div>
+
+        <div class="container-fluid col-12 bg-white rounded-3 mt-3">
+        <canvas id="line"></canvas>
+        </div>
+
     </div>
-    
+
 
     <script>
-        // gauge
-        // Gauge
-        const data = 38.6;
-        const width = 350;
-        const height = 280;
-        document.getElementById('generator-value').innerHTML = data + '%';
-        const radius = Math.min(width, height) / 2.5;
+        ///wave chart
+        const ctl = document.getElementById('line');
 
-        const svg = d3.select("svg");
-        const g = svg.append("g")
-            .attr("transform", `translate(${width / 2}, ${height / 2})`);
+        new Chart(ctl, {
+            type: 'line',
+            data: {
 
-        const arc = d3.arc()
-            .innerRadius(radius * 1)
-            .outerRadius(radius * 0.9)
-            .startAngle(-Math.PI / 2)
-            .endAngle(Math.PI / 2);
+                datasets: [{
+                    type: 'line',
+                    label: 'data1',
+                    data: [8, 2, 6, 3, 8, 1, 11, 9, 7],
+                    backgroundColor: 'rgba(64,110,113,0.8)',
+                    // bordertype: 'line'Color: 'rgb(250, 236, 37)',
+                    borderWidth: 1,
+                    fill: true,
+                    tension: 0.5,
+                },
+                {
+                    // ,
+                    // label: 'data2',
+                    data: [0, 4, 5, 6, 2, 6, 6],
+                    backgroundColor: 'rgba(99,180,181,0.8)',
+                    // borderColor: 'rgb(252, 158, 17)',
+                    borderWidth: 1,
+                    fill: true,
+                    tension: 0.4,
+                }],
+                labels: ['1', '2', '3', '4', '5', '6', '7'],
+            },
 
-        const gauge = g.append("path")
-            .attr("class", "gauge")
-            .attr("d", arc);
-
-        const needle = g.append("line")
-            .attr("class", "needle")
-            .attr("x1", 0)
-            .attr("y1", 0)
-            .attr("x2", 0)
-            .attr("y2", -radius * 0.8);
-
-        const ticks = g.selectAll(".tick")
-            .data([0, 20, 40, 60, 80, 100, 120])
-            .enter().append("g")
-            .attr("class", "tick")
-            .attr("transform", d => `rotate(${((d - 60) / 60) * 90})`);
-
-        ticks.append("line")
-            .attr("x1", 0)
-            .attr("y1", -radius * 0.85)
-            .attr("x2", 0)
-            .attr("y2", -radius * 0.9);
-
-        ticks.append("text")
-            .attr("class", "tick-label")
-            .attr("x", 0)
-            .attr("y", -radius * 1.1)
-            .text(d => d);
-
-        const needleAngle = ((data - 60) / 60) * Math.PI / 2;
-        needle.transition().duration(2000)
-            .attr("transform", `rotate(${needleAngle * 180 / Math.PI})`);
-
+        });
 
     </script>
 
